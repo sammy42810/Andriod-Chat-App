@@ -1,0 +1,9 @@
+.gradle/
+build/
+*.apk
+local.properties
+.idea/workspace.xml
+.idea/caches/
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+*.iml
