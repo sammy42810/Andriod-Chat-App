@@ -32,28 +32,13 @@ public abstract class PeerDao {
     @Query("SELECT id FROM peers WHERE name = :name")
     protected abstract long getPeerId(String name);
 
-    /**
-     *  Insert a peer and return their primary key (must not already be in database)
-     * @param peer
-     * @return
-     */
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     protected abstract void insert(Peer peer);
 
-    /**
-     * Update the metadata for a peer (GPS coordinates, last seen)
-     * @param peer
-     */
     @Update
     protected abstract void update(Peer peer);
 
     @Transaction
-    /**
-     * TODO Add a peer record if it does not already exist;
-     * update information if it is already defined.
-     * This operation must be transactional, to avoid race condition
-     * between search and insert
-     */
     public void upsert(Peer peer) {
         long id = getPeerId(peer.name);
         if (id == 0) {

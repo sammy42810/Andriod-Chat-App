@@ -17,7 +17,7 @@ import edu.stevens.cs522.chatserver.entities.TimestampConverter;
  * See build.gradle file for app for where schema file is left after processing.
  */
 
-@Database(entities = {Peer.class, Message.class}, version = 1, exportSchema = false)
+@Database(entities = {Peer.class, Message.class}, version = 2, exportSchema = true)
 @TypeConverters({TimestampConverter.class})
 public abstract class ChatDatabase extends RoomDatabase {
 
@@ -32,7 +32,10 @@ public abstract class ChatDatabase extends RoomDatabase {
     public static ChatDatabase getInstance(Context context) {
         if (instance == null) {
             // We allow main thread queries (for insert/upsert) for THIS ASSIGNMENT ONLY!
-            instance = Room.databaseBuilder(context, ChatDatabase.class, DATABASE_NAME).allowMainThreadQueries().build();
+            instance = Room.databaseBuilder(context, ChatDatabase.class, DATABASE_NAME)
+                    .allowMainThreadQueries()
+                    .fallbackToDestructiveMigration()
+                    .build();
         }
         return instance;
     }
