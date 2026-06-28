@@ -71,7 +71,9 @@ public class TextAdapter<T> extends RecyclerView.Adapter<TextAdapter.ViewHolder>
         @Override
         public void onClick(View v) {
             int position = this.getBindingAdapterPosition();
-            // TODO invoke the listener
+            if (listener != null && position != RecyclerView.NO_ID) {
+                listener.onItemClick(recyclerView, v, position);
+            }
         }
     }
 
@@ -105,6 +107,7 @@ public class TextAdapter<T> extends RecyclerView.Adapter<TextAdapter.ViewHolder>
      */
     public void setDataset(List<T> dataset) {
         this.dataset = dataset;
+        notifyDataSetChanged();
     }
 
     public T getItem(int position) {

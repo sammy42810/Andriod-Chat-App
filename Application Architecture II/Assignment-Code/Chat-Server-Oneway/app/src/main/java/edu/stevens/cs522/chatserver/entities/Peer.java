@@ -3,20 +3,20 @@ package edu.stevens.cs522.chatserver.entities;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.room.Entity;
+import androidx.room.Index;
+import androidx.room.PrimaryKey;
+
 import java.time.Instant;
 
 /**
  * Created by dduggan.
  */
 
-/*
- * TODO annotate as entity object
- *
- * Since foreign keys reference the name field, we need to define a unique index on that.
- */
+@Entity(tableName = "peers", indices = {@Index(value = "name", unique = true)})
 public class Peer implements Parcelable {
 
-    // TODO primary key
+    @PrimaryKey(autoGenerate = true)
     public long id;
 
     public String name;
@@ -37,14 +37,21 @@ public class Peer implements Parcelable {
     }
 
     public Peer(Parcel in) {
-        // TODO
-
+        id = in.readLong();
+        name = in.readString();
+        String ts = in.readString();
+        timestamp = ts == null ? null : TimestampConverter.deserialize(ts);
+        latitude = in.readDouble();
+        longitude = in.readDouble();
     }
 
     @Override
     public void writeToParcel(Parcel out, int flags) {
-        // TODO
-
+        out.writeLong(id);
+        out.writeString(name);
+        out.writeString(timestamp == null ? null : TimestampConverter.serialize(timestamp));
+        out.writeDouble(latitude == null ? 0.0 : latitude);
+        out.writeDouble(longitude == null ? 0.0 : longitude);
     }
 
     @Override
@@ -56,14 +63,12 @@ public class Peer implements Parcelable {
 
         @Override
         public Peer createFromParcel(Parcel source) {
-            // TODO
-            return null;
+            return new Peer(source);
         }
 
         @Override
         public Peer[] newArray(int size) {
-            // TODO
-            return null;
+            return new Peer[size];
         }
 
     };

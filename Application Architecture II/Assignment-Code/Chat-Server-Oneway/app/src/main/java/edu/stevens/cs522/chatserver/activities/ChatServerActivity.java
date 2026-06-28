@@ -10,6 +10,7 @@
 **********************************************************************/
 package edu.stevens.cs522.chatserver.activities;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -125,16 +126,16 @@ public class ChatServerActivity extends FragmentActivity implements OnClickListe
         RecyclerView messageList = findViewById(R.id.message_list);
         messageList.setLayoutManager(new LinearLayoutManager(this));
 
-        // TODO Initialize the recyclerview and adapter for messages
+        messagesAdapter = new MessagesAdapter();
+        messageList.setAdapter(messagesAdapter);
 
+        chatViewModel = new ViewModelProvider(this).get(ChatViewModel.class);
 
-        // TODO create the view model
+        chatViewModel.fetchAllMessages().observe(this, messages -> {
+            messagesAdapter.setMessages(messages);
+        });
 
-
-        // TODO query the database asynchronously, and use messagesAdapter to display the result
-
-
-        // TODO bind the button for "next" to this activity as listener
+        findViewById(R.id.next).setOnClickListener(this);
 
 
 	}
@@ -232,9 +233,8 @@ public class ChatServerActivity extends FragmentActivity implements OnClickListe
             message.latitude = latitude;
             message.longitude = longitude;
 
-            /*
-			 * TODO upsert peer and insert message into the database
-			 */
+            chatViewModel.upsert(peer);
+            chatViewModel.persist(message);
 
             /*
              * End TODO
@@ -288,9 +288,7 @@ public class ChatServerActivity extends FragmentActivity implements OnClickListe
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        // TODO inflate a menu with PEERS option
-
-
+        getMenuInflater().inflate(R.menu.chatserver_menu, menu);
         return true;
     }
 
@@ -299,9 +297,8 @@ public class ChatServerActivity extends FragmentActivity implements OnClickListe
         super.onOptionsItemSelected(item);
         int itemId = item.getItemId();
         if (itemId == R.id.peers) {
-            // TODO PEERS provide the UI for viewing list of peers
-            // The subactivity will query the database for the list of peers.
-
+            Intent intent = new Intent(this, ViewPeersActivity.class);
+            startActivity(intent);
             return true;
 
         }

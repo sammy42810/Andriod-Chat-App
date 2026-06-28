@@ -2,8 +2,14 @@ package edu.stevens.cs522.chatserver.databases;
 
 import android.content.Context;
 
+import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
+
+import edu.stevens.cs522.chatserver.entities.Message;
+import edu.stevens.cs522.chatserver.entities.Peer;
+import edu.stevens.cs522.chatserver.entities.TimestampConverter;
 
 /**
  * Created by dduggan.
@@ -11,7 +17,8 @@ import androidx.room.RoomDatabase;
  * See build.gradle file for app for where schema file is left after processing.
  */
 
-// Add annotations (including @TypeConverters)
+@Database(entities = {Peer.class, Message.class}, version = 1, exportSchema = false)
+@TypeConverters({TimestampConverter.class})
 public abstract class ChatDatabase extends RoomDatabase {
 
     private static final String DATABASE_NAME = "messages.db";

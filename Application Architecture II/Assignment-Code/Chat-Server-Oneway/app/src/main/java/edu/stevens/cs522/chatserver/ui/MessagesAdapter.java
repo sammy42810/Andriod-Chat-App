@@ -63,13 +63,11 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
         return new ViewHolder(view);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-
-        // TODO set the fields of the view for the message
-
-
+        Message message = messages.get(position);
+        viewHolder.setSender(message.sender);
+        viewHolder.setMessage(message.messageText);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -83,6 +81,7 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
      */
     public void setMessages(List<Message> messages) {
         this.messages = messages;
+        notifyDataSetChanged();
     }
 }
 

@@ -3,23 +3,29 @@ package edu.stevens.cs522.chatserver.entities;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.Index;
+import androidx.room.PrimaryKey;
+
 import java.time.Instant;
 
 /**
  * Created by dduggan.
  */
 
-/*
- * TODO as an entity object
- *
- * You should specify that "sender" is a FK reference to a peer record.
- * You should also declare a (non-unique) index for this FK field, so
- * integrity checking does not involve a linear search of this table.
- */
-
+@Entity(
+    tableName = "messages",
+    foreignKeys = @ForeignKey(
+        entity = Peer.class,
+        parentColumns = "name",
+        childColumns = "sender"
+    ),
+    indices = {@Index("sender")}
+)
 public class Message implements Parcelable {
 
-    // TODO primary key
+    @PrimaryKey(autoGenerate = true)
     public long id;
 
     public String chatroom;
