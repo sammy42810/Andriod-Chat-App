@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7663d6d0-809e-4657-870c-45c808bd8e20" name="Changes" comment="deploy">
+      <change afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deviceManager.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/studiobot.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat-Server-Oneway/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat-Server-Oneway/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat-Server-Oneway/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat-Server-Oneway/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat-Server-Oneway/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat-Server-Oneway/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat-Server-Oneway/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/databases/ChatDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/databases/ChatDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/databases/PeerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/databases/PeerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat-Server-Oneway/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat-Server-Oneway/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/AndroidProjectSystem.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/deviceManager.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/studiobot.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/libs/cs522-library.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/androidTest/java/edu/stevens/cs522/chatclient/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/java/edu/stevens/cs522/chatclient/activities/ChatClientActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/java/edu/stevens/cs522/chatclient/location/CurrentLocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/layout/chat_client.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/values-w820dp/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/app/src/test/java/edu/stevens/cs522/chatclient/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/install.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Client-Oneway/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Server-Oneway/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Server-Oneway/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Server-Oneway/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Architecture 1/Assignment-Code/Chat-Server-Oneway/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[LocalEmulator::path=C:\Users\saman\.android\avd\Pixel_4.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Chat-Client-Oneway" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sammy42810&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sammy42810/Andriod-Chat-App.git&quot;,
+    &quot;accountId&quot;: &quot;5888d43b-8ce4-48b2-b4ee-4903967f1da2&quot;
+  }
+}</component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\saman\.gradle\wrapper\dists\gradle-9.4.1-bin\arn2x92ynaizyzdaamcbpbhtj\gradle-9.4.1" javaHome="C:\Program Files\Android\Android Studio\jbr" gradleVersion="9.4.1" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="38o9QYPANjzWCPTkGxu7uqAIKDW" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PA5__Architecture__II&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/saman/Documents/School/shared/CS522/Application Architecture II/Assignment-Code/Chat-Client-Oneway&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;emulator&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="Chat-Client-Oneway.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7663d6d0-809e-4657-870c-45c808bd8e20" name="Changes" comment="" />
+      <created>1769455041969</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769455041969</updated>
+    </task>
+    <task id="LOCAL-00001" summary="deploy">
+      <option name="closed" value="true" />
+      <created>1782087887502</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1782087887502</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="PA3_Setup" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy" />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="edu.stevens.cs522.chatclient">
+          <value>
+            <CheckInfo lastCheckTimestamp="1782087611162" />
+          </value>
+        </entry>
+        <entry key="edu.stevens.cs522.chatclient.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1782087611166" />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
