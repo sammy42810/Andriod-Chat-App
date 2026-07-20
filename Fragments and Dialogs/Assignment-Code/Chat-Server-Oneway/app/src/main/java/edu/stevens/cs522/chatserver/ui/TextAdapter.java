@@ -22,7 +22,7 @@ public class TextAdapter<T> extends RecyclerView.Adapter<TextAdapter<T>.ViewHold
 
     // Indicate if something is selected view
     private static final int TYPE_INACTIVE = 1;
-    private static final int TYPE_ACTIVE = 1;
+    private static final int TYPE_ACTIVE = 2;
 
     private final RecyclerView recyclerView;
 
@@ -79,8 +79,9 @@ public class TextAdapter<T> extends RecyclerView.Adapter<TextAdapter<T>.ViewHold
             selected = position;
             notifyItemChanged(position);
 
-            // TODO invoke the listener
-
+            if (listener != null && position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(recyclerView, v, position, dataset.get(position));
+            }
         }
     }
 
@@ -131,6 +132,7 @@ public class TextAdapter<T> extends RecyclerView.Adapter<TextAdapter<T>.ViewHold
      */
     public void setDataset(List<T> dataset) {
         this.dataset = dataset;
+        notifyDataSetChanged();
     }
 
 }

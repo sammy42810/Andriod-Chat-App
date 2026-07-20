@@ -57,6 +57,9 @@ dependencies {
     // Support for predictive back gestures
     implementation(libs.activity)
 
+    // Two-pane landscape layout uses ConstraintLayout
+    implementation(libs.constraintlayout)
+
     // Dependencies for RecyclerView
     implementation(libs.recyclerview)
     // For control over item selection of both touch and mouse driven selection

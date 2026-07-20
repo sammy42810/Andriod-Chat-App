@@ -14,13 +14,25 @@ import java.time.Instant;
  * Created by dduggan.
  */
 
-// TODO annotate (including FK constraints)
-// You must also declare indices on the FK columns, otherwise integrity checking
-// may trigger a linear search of this table.
-
+@Entity(
+    tableName = "messages",
+    foreignKeys = {
+        @ForeignKey(
+            entity = Peer.class,
+            parentColumns = "name",
+            childColumns = "sender"
+        ),
+        @ForeignKey(
+            entity = Chatroom.class,
+            parentColumns = "name",
+            childColumns = "chatroom"
+        )
+    },
+    indices = {@Index("sender"), @Index("chatroom")}
+)
 public class Message implements Parcelable {
 
-    // TODO annotate
+    @PrimaryKey(autoGenerate = true)
     public long id;
 
     public String chatroom;

@@ -14,17 +14,14 @@ import java.util.List;
 
 import edu.stevens.cs522.chatserver.entities.Peer;
 
-/*
- * TODO add annotations (NB insert should ignore conflicts, for upsert)
- *
- * We will continue to allow insertion to be done on main thread for noew.
- */
+@Dao
 public abstract class PeerDao {
 
     /**
      * Get all peers in the database.
      * @return
      */
+    @Query("SELECT * FROM peers ORDER BY name ASC")
     public abstract LiveData<List<Peer>> fetchAllPeers();
 
     /**
@@ -32,6 +29,7 @@ public abstract class PeerDao {
      * @param name
      * @return
      */
+    @Query("SELECT id FROM peers WHERE name = :name")
     protected abstract long getPeerId(String name);
 
     /**
@@ -39,6 +37,7 @@ public abstract class PeerDao {
      * @param peer
      * @return
      */
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     protected abstract void insert(Peer peer);
 
     /**
@@ -50,18 +49,18 @@ public abstract class PeerDao {
 
     @Transaction
     /**
-     * TODO Add a peer record if it does not already exist;
+     * Add a peer record if it does not already exist;
      * update information if it is already defined.
      * This operation must be transactional, to avoid race condition
      * between search and insert
      */
     public void upsert(Peer peer) {
-        // TODO
         long id = getPeerId(peer.name);
         if (id == 0) {
-            // TODO
+            insert(peer);
         } else {
-            // TODO
+            peer.id = id;
+            update(peer);
         }
     }
 }

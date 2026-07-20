@@ -112,8 +112,8 @@ public class MessagesFragment extends Fragment implements OnClickListener {
         RecyclerView messageList = rootView.findViewById(R.id.message_list);
         messageList.setLayoutManager(new LinearLayoutManager(requireActivity()));
 
-        // TODO Initialize the recyclerview and adapter for messages
-
+        messagesAdapter = new MessageSenderAdapter();
+        messageList.setAdapter(messagesAdapter);
 
         return rootView;
     }
@@ -121,8 +121,8 @@ public class MessagesFragment extends Fragment implements OnClickListener {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // TODO get the view models
-
+        chatViewModel = new ViewModelProvider(requireActivity()).get(ChatViewModel.class);
+        sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
         // Rely on live data to requery the messages if the chatroom selection changes
         queryMessages(sharedViewModel.getSelected());
@@ -140,13 +140,19 @@ public class MessagesFragment extends Fragment implements OnClickListener {
             // messagesAdapter.notifyItemRangeChanged(0, 1);
             messagesAdapter.notifyItemRangeRemoved(0, messagesAdapter.getItemCount());
             messagesAdapter.setMessages(new ArrayList<>(0));
-            // TODO remove any observers of messages as we leave the chatroom
-
+            // remove any observers of messages as we leave the chatroom
+            if (messages != null) {
+                messages.removeObservers(getViewLifecycleOwner());
+                messages = null;
+            }
             return;
         }
 
-        // TODO query the database asynchronously, and use messagesAdapter to display the result
-        // The messages live data will need an observer for when new messages are inserted.
+        messages = chatViewModel.fetchAllMessages(chatroom);
+        messages.observe(getViewLifecycleOwner(), newMessages -> {
+            messagesAdapter.setMessages(newMessages);
+            messagesAdapter.notifyDataSetChanged();
+        });
 
     }
 
