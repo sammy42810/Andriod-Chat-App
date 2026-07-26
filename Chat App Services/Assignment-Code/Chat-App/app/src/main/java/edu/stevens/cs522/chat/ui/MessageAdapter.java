@@ -71,8 +71,9 @@ public abstract class MessageAdapter extends RecyclerView.Adapter<MessageAdapter
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
 
-        // TODO set the fields of the view for the message
-        // Use getHeading() to get the heading in the message
+        Message message = messages.get(position);
+        viewHolder.setMetadata(getHeading(message));
+        viewHolder.setMessage(message.messageText);
 
     }
 

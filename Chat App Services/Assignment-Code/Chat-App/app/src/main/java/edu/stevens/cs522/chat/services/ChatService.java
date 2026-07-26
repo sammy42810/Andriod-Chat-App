@@ -85,9 +85,9 @@ public class ChatService extends Service implements IChatService {
             throw new IllegalStateException("Unable to init client socket.", e);
         }
 
-        // TODO initialize the thread that sends messages
-
-        // end TODO
+        HandlerThread sendThread = new HandlerThread(SEND_TAG, Process.THREAD_PRIORITY_BACKGROUND);
+        sendThread.start();
+        sendHandler = new SendHandler(sendThread.getLooper());
 
         receiveThread = new Thread(new ReceiverThread());
         receiveThread.start();
@@ -122,8 +122,18 @@ public class ChatService extends Service implements IChatService {
     public void send(String destAddress, String chatRoom, String messageText,
                      Instant timestamp, double latitude, double longitude, ResultReceiver receiver) {
         android.os.Message message = sendHandler.obtainMessage();
-        // TODO send the message to the sending thread (add a bundle with params)
 
+        Bundle data = new Bundle();
+        data.putString(SendHandler.HDLR_DEST_ADDRESS, destAddress);
+        data.putString(SendHandler.HDLR_CHATROOM, chatRoom);
+        data.putString(SendHandler.HDLR_MESSAGE_TEXT, messageText);
+        data.putString(SendHandler.HDLR_TIMESTAMP, TimestampConverter.serialize(timestamp));
+        data.putDouble(SendHandler.HDLR_LATITUDE, latitude);
+        data.putDouble(SendHandler.HDLR_LONGITUDE, longitude);
+        data.putParcelable(SendHandler.HDLR_RECEIVER, receiver);
+        message.setData(data);
+
+        sendHandler.sendMessage(message);
     }
 
 
@@ -165,11 +175,17 @@ public class ChatService extends Service implements IChatService {
 
                 Bundle data = message.getData();
 
-                // TODO get data from message (including result receiver)
-
-
-
-                // End todo
+                destinationAddr = data.getString(SendHandler.HDLR_DEST_ADDRESS);
+                chatRoom = data.getString(SendHandler.HDLR_CHATROOM);
+                messageText = data.getString(SendHandler.HDLR_MESSAGE_TEXT);
+                timestamp = TimestampConverter.deserialize(data.getString(SendHandler.HDLR_TIMESTAMP));
+                latitude = data.getDouble(SendHandler.HDLR_LATITUDE);
+                longitude = data.getDouble(SendHandler.HDLR_LONGITUDE);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+                    receiver = data.getParcelable(SendHandler.HDLR_RECEIVER, ResultReceiver.class);
+                } else {
+                    receiver = data.getParcelable(SendHandler.HDLR_RECEIVER);
+                }
 
                 /*
                  * Insert into the local database
@@ -316,10 +332,12 @@ public class ChatService extends Service implements IChatService {
                     message.longitude = longitude;
 
                     /*
-                     * TODO upsert chatroom and peer, and insert message into the database
+                     * Upsert chatroom and peer, and insert message into the database.
+                     * Okay to do this synchronously because we are on a background thread.
                      */
-
-
+                    chatDatabase.chatroomDao().insert(chatroom);
+                    chatDatabase.peerDao().upsert(peer);
+                    chatDatabase.messageDao().persist(message);
 
                 } catch (Exception e) {
 

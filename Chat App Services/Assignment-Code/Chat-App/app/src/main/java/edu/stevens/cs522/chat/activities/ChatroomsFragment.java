@@ -83,8 +83,8 @@ public class ChatroomsFragment extends Fragment implements View.OnClickListener,
         RecyclerView chatroomList = rootView.findViewById(R.id.chatroom_list);
         chatroomList.setLayoutManager(new LinearLayoutManager(requireActivity()));
 
-        // TODO Initialize the recyclerview and adapter for messages
-
+        chatroomsAdapter = new TextAdapter<>(chatroomList, this);
+        chatroomList.setAdapter(chatroomsAdapter);
 
         chatroomName = rootView.findViewById(R.id.chatroom_add_text);
 
@@ -104,10 +104,12 @@ public class ChatroomsFragment extends Fragment implements View.OnClickListener,
             setActivatedPosition(savedInstanceState.getInt(STATE_ACTIVATED_POSITION));
         }
 
-        // TODO initialize the chatroom view model
+        chatroomViewModel = new ViewModelProvider(this).get(ChatroomViewModel.class);
 
-
-        // TODO query the database asynchronously, and use messagesAdapter to display the result
+        chatroomViewModel.fetchAllChatrooms().observe(getViewLifecycleOwner(), chatrooms -> {
+            chatroomsAdapter.setDataset(chatrooms);
+            chatroomsAdapter.notifyDataSetChanged();
+        });
 
     }
 
@@ -131,7 +133,7 @@ public class ChatroomsFragment extends Fragment implements View.OnClickListener,
             return;
         }
 
-        // TODO request the activity to add the chatroom to the database
+        listener.addChatroom(chatroomName.getText().toString().trim());
 
         chatroomName.setText("");
     }
@@ -140,7 +142,7 @@ public class ChatroomsFragment extends Fragment implements View.OnClickListener,
     public void onItemClick(RecyclerView parent, View view, int position, Chatroom chatroom) {
         Log.d(TAG, "Click on chatroom at position "+position);
         setActivatedPosition(position);
-        // TODO ask the activity to respond to the selection (in single-pane layout, it will push detail fragment)
+        listener.setChatroom(chatroom);
     }
 
     @Override

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Dominic\'s Chat App</string>
+    <string name="app_name">Samantha\'s Chat App</string>
 
     <string name="title_activity_chat">Chat</string>
     <string name="title_activity_register">Register</string>
@@ -29,6 +29,9 @@
     <string name="messages_heading">Sender: %1$s [Chatroom: %2$s]</string>
 
     <string name="message_received">Message received in chat room %s!</string>
+
+    <string name="message_sent">Message sent!</string>
+    <string name="message_send_failed">Failed to send message!</string>
 
     <string name="chat_user_name">Chat Name:</string>
     <string name="chat_room_text">Chat Room</string>

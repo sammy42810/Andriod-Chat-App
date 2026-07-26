@@ -85,9 +85,9 @@ public class SendMessage extends DialogFragment {
             throw new IllegalArgumentException("MIssing chatroom argument!");
         }
 
-        // TODO initialize the UI.
+        destinationAddr = rootView.findViewById(R.id.destination_addr);
 
-        // End todo
+        messageText = rootView.findViewById(R.id.message_text);
 
         Button confirm = rootView.findViewById(R.id.send);
         confirm.setOnClickListener(confirmListener);
@@ -137,7 +137,7 @@ public class SendMessage extends DialogFragment {
             String message = messageText.getText().toString();
             Log.d(TAG, String.format("...sending \"%s\" to %s as %s....", message, chatroom, clientName));
 
-            // TODO tell the activity to send the message
+            listener.send(destAddrString, chatroom, clientName, message);
 
             Log.d(TAG, "...dismissing dialog.");
             SendMessage.this.dismiss();

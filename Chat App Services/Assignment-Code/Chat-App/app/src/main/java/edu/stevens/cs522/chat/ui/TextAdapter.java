@@ -84,7 +84,9 @@ public class TextAdapter<T> extends RecyclerView.Adapter<TextAdapter<T>.ViewHold
 
             Log.d(TAG, "Clicked on position "+position+" in list of items....");
 
-            // TODO invoke the listener
+            if (listener != null) {
+                listener.onItemClick(recyclerView, v, position, dataset.get(position));
+            }
 
         }
     }
